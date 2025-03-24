@@ -3,41 +3,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <groupId>com.project</groupId>
     <artifactId>job-board-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>job-board-app</name>
     <description>Job Board Application project for Spring Boot</description>
 
+    <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.5.2</version>
+    <relativePath/>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <kie.version>6.1.0.Final</kie.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <hibernate.version>5.2.13.Final</hibernate.version>
     </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <release>8</release>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 
     <dependencies>
 
@@ -82,46 +66,15 @@
 
     </dependencies>
 
-    <!--	<build>-->
-    <!--		<plugins>-->
-    <!--			<plugin>-->
-    <!--				<groupId>org.springframework.boot</groupId>-->
-    <!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-    <!--			</plugin>-->
-    <!--			&lt;!&ndash; for code coverage   &ndash;&gt;-->
-    <!--			<plugin>-->
-    <!--				<groupId>org.jacoco</groupId>-->
-    <!--				<artifactId>jacoco-maven-plugin</artifactId>-->
-    <!--				<version>0.8.0</version>-->
-    <!--				<executions>-->
-    <!--					<execution>-->
-    <!--						<id>default-prepare-agent</id>-->
-    <!--						<goals>-->
-    <!--							<goal>prepare-agent</goal>-->
-    <!--						</goals>-->
-    <!--					</execution>-->
-    <!--					<execution>-->
-    <!--						<id>default-report</id>-->
-    <!--						<phase>prepare-package</phase>-->
-    <!--						<goals>-->
-    <!--							<goal>report</goal>-->
-    <!--						</goals>-->
-    <!--					</execution>-->
-    <!--				</executions>-->
-    <!--			</plugin>-->
+    <build>
+        <plugins>
 
-    <!--		</plugins>-->
-    <!--	</build>-->
-
-    <repositories>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${parent.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
