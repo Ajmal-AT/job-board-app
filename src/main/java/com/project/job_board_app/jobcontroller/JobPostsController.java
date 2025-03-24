@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = ConstantFile.JOB_ROUTE)
 @Transactional
+@CrossOrigin("*")
 public class JobPostsController {
 
     @Autowired
