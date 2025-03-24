@@ -12,5 +12,5 @@ RUN mkdir -p /job-board-app
 # RUN mkdir -p /usr/images
 # RUN chmod 777 /usr/images
 COPY --from=build /job-board-app/target/job-board-app-*.jar /job-board-app/job-board-app.jar
-ENTRYPOINT ["java","-jar","/customer/job-board-app.jar"]
+ENTRYPOINT ["java","-jar","/job-board-app/job-board-app.jar"]
 
