@@ -1,5 +1,5 @@
 # Use Maven with Java 8
-FROM maven:3.9.9-eclipse-temurin-8-focal AS build
+FROM maven:3.8.1-eclipse-temurin-8-focal AS build
 
 # Set working directory
 WORKDIR /job-board-app
