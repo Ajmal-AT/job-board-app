@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "paketobuildpacks/builder:base",
+    "buildpacks": [
+      "paketo-buildpacks/java"
+    ],
+    "env": {
+      "BP_JVM_VERSION": "8"
+    }
+  }
+}
