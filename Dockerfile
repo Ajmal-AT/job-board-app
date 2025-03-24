@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-8-focal AS build
+FROM maven:3-eclipse-temurin-8-focal AS build
 RUN mkdir /job-board-app
 WORKDIR /job-board-app
 COPY . .
