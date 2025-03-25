@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+// @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RestController
 @RequestMapping(value = ConstantFile.JOB_ROUTE)
 @Transactional
@@ -33,6 +33,7 @@ public class JobPostsController {
     public JobPostsModel getJobById(@PathVariable String id) throws NotFoundException {
         return jobPostsService.getJobById(id);
     }
+
     @PostMapping("/save")
     public JobPostsModel addJob(@RequestBody JobPostsModel job) {
         return jobPostsService.saveJob(job);
