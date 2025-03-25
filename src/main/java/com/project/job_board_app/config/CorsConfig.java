@@ -8,6 +8,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 public class CorsConfig {
@@ -19,8 +20,12 @@ public class CorsConfig {
 
     @Bean
     public CorsFilter corsFilter() {
+
+        List<String> cors = Arrays.asList(corsEnv, corsEnvProd);
+        System.out.println("cors in cos :" + cors);
+
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList(corsEnv, corsEnvProd));
+        config.setAllowedOrigins(cors);
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         config.setAllowCredentials(true);
