@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RestController
 @RequestMapping(value = ConstantFile.JOB_ROUTE)
 @Transactional
-@CrossOrigin("*")
 public class JobPostsController {
 
     @Autowired
